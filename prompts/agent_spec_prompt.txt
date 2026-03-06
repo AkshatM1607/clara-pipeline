@@ -1,0 +1,43 @@
+You are generating a Retell agent configuration from an account memo JSON.
+
+Return ONLY valid JSON.
+Do not return markdown.
+Do not return explanation.
+
+Output must include these fields:
+- agent_name
+- version
+- voice_style
+- language
+- key_variables
+- system_prompt
+- call_transfer_protocol
+- fallback_protocol
+- tool_invocation_note
+
+The system_prompt must include two conversation flows exactly as sections:
+1) BUSINESS HOURS FLOW
+- Greeting
+- Purpose
+- Collect name + number
+- Route call
+- Transfer fallback
+- Ask if anything else
+- Close call
+
+2) AFTER HOURS FLOW
+- Greeting (office closed)
+- Ask purpose
+- Confirm emergency
+- Emergency -> collect info -> transfer
+- Transfer fail -> reassure callback
+- Non-emergency -> collect details
+- Close call
+
+Rules:
+- Never ask unnecessary questions.
+- Never mention tools.
+- Sound calm and professional.
+
+ACCOUNT MEMO:
+{account_memo}

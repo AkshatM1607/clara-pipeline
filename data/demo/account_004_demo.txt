@@ -1,0 +1,29 @@
+Rep: Welcome to Clara Answers setup planning for FlowRight Plumbing.
+Client: Appreciate it.
+Rep: Can you confirm your business name?
+Client: FlowRight Plumbing.
+Rep: Share your main office address.
+Client: 2602 E Thomas Rd, Phoenix, AZ 85016.
+Rep: What hours should be treated as open?
+Client: Monday through Sunday, 6:00 AM to 9:00 PM Mountain.
+Rep: Which services should callers hear?
+Client: Drain cleaning, leak detection, water heater repair, sewer camera inspections.
+Rep: Define emergency scenarios.
+Client: Major leak flooding, sewer backup, no water in occupied home, or burst pipe.
+Rep: Emergency transfer order in business hours?
+Client: Route to dispatch captain Nora Patel, then operations lead Ben Chavez, then emergency plumber group line.
+Rep: Emergency transfer fallback?
+Client: Tell caller help is being escalated and plumber callback target is 20 minutes.
+Rep: Non-emergency routing?
+Client: Collect details and place into standard scheduling queue.
+Rep: Transfer timeout and retries?
+Client: 25-second timeout, 2 retries.
+Rep: Transfer failure message?
+Client: We are securing the next available plumber and will contact you shortly.
+Rep: Integration constraints?
+Client: FieldEdge integration only; no insurance claim advice and no parts cost commitments.
+Rep: How should after-hours work?
+Client: Ask if emergency first, transfer emergencies to on-call plumber, non-emergency leaves service details for morning.
+Rep: Anything else?
+Client: Keep language simple for homeowners.
+Rep: Great, your baseline plan is clear.

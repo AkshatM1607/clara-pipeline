@@ -1,0 +1,29 @@
+Rep: Thanks for joining the Clara Answers demo for Bright Shield Fire Protection.
+Client: Happy to be here.
+Rep: Can you confirm your company name exactly as used publicly?
+Client: Bright Shield Fire Protection.
+Rep: What is your office address?
+Client: 1840 Westerville Rd, Columbus, OH 43224.
+Rep: What business hours should the phone agent treat as open?
+Client: Monday through Friday, 8:00 AM to 6:00 PM Eastern.
+Rep: Which services do you want callers to hear first?
+Client: Fire sprinkler inspection, alarm panel testing, extinguisher service, and code compliance checks.
+Rep: How do you define an emergency?
+Client: Active fire alarm trouble, sprinkler burst, no water pressure to suppression lines, or a downed fire pump.
+Rep: During open hours, where should emergencies route first?
+Client: First to dispatch lead Megan Holt, then operations manager Luis Pena, then on-call tech line.
+Rep: If no one answers emergency transfer, what should happen?
+Client: Tell them we are escalating and someone will call back within 10 minutes.
+Rep: What about non-emergency calls during office hours?
+Client: Collect issue details and book with the service coordinator queue.
+Rep: Transfer timeout and retries?
+Client: Timeout at 22 seconds, retry twice.
+Rep: Any specific fail message?
+Client: Say, We did not reach a dispatcher yet, but we are logging your request now.
+Rep: Integration limits we should know?
+Client: We use Housecall Pro; no outbound SMS and no calendar writes from the agent.
+Rep: After-hours flow preference?
+Client: Ask if it is emergency, transfer emergencies to on-call line, otherwise capture details for next business day.
+Rep: Any extra notes?
+Client: Keep tone calm because many callers are stressed facility managers.
+Rep: Perfect, that gives us enough for your first configuration.

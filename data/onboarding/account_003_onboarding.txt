@@ -1,0 +1,27 @@
+Rep: This call is to capture onboarding updates for Volt Masters Electric.
+Client: Perfect, we updated procedures.
+Rep: Confirm address on file.
+Client: Still 4218 S Halsted St, Chicago, IL 60609.
+Rep: Any changes to business hours?
+Client: Yes, now Monday through Saturday, 7:00 AM to 6:00 PM Central.
+Rep: Service updates?
+Client: Add standby generator diagnostics.
+Rep: Emergency definition updates?
+Client: Add repeated breaker trip in medical office as emergency.
+Rep: Emergency routing order now?
+Client: First Dante Ruiz, second Erin Blake, third emergency electrician hotline.
+Rep: Fallback callback timing changed?
+Client: Change to callback within 9 minutes.
+Rep: Non-emergency flow changes?
+Client: Still collect details, and also capture if tenant or property owner.
+Rep: New transfer timeout and retries?
+Client: Timeout is 21 seconds and retries 2.
+Rep: Updated transfer fail message?
+Client: We are escalating to our electrical response team and you are in priority queue.
+Rep: Integration constraints update?
+Client: Keep Jobber limits and add no permit timeline guarantees.
+Rep: After-hours handling adjustments?
+Client: Emergency transfers to on-call electrician, non-emergency gets ticket plus preferred callback time.
+Rep: Any prompt style updates?
+Client: Be calm and safety-forward, not technical.
+Rep: Great, we will generate your version 2 package.

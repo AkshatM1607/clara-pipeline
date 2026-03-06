@@ -1,0 +1,27 @@
+Rep: We are finalizing onboarding details for FlowRight Plumbing.
+Client: Sounds good.
+Rep: Is your office address still the same?
+Client: Yes, 2602 E Thomas Rd, Phoenix, AZ 85016.
+Rep: Business hours update?
+Client: Yes, now Monday through Sunday, 5:30 AM to 10:00 PM Mountain.
+Rep: Any service additions?
+Client: Add slab leak inspection.
+Rep: Emergency definition changes?
+Client: Add gas line leak with odor as emergency category.
+Rep: Emergency routing order changes?
+Client: Primary is Ben Chavez, then Nora Patel, then emergency plumber group line.
+Rep: Fallback callback timing update?
+Client: Tighten it to 12 minutes.
+Rep: Non-emergency path updates?
+Client: Keep standard scheduling queue and collect whether water must be shut off.
+Rep: Transfer timeout and retries now?
+Client: Timeout 30 seconds and retries 1.
+Rep: Updated failure message?
+Client: We are dispatching the next available plumber and will call you shortly with status.
+Rep: Integration constraints update?
+Client: FieldEdge only, and do not provide insurance coverage guidance.
+Rep: After-hours handling updates?
+Client: Emergency transfers remain, non-emergency should collect details and ask preferred callback window tomorrow.
+Rep: Any conversational changes?
+Client: Keep it plain language and empathetic.
+Rep: Great, we have everything needed for v2.

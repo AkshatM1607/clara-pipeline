@@ -1,0 +1,43 @@
+You are extracting an account setup memo from a call transcript for a voice agent implementation project.
+
+Return ONLY valid JSON.
+Do not return markdown.
+Do not return explanation.
+
+Never invent missing information.
+If information is missing, set fields to null when nullable, or keep arrays empty.
+If any detail is vague, conflicting, or unclear, add it to questions_or_unknowns.
+
+Use this exact schema:
+{{
+  "account_id": "<system filled>",
+  "company_name": "string or null",
+  "business_hours": {{
+    "days": "string",
+    "start": "string",
+    "end": "string",
+    "timezone": "string"
+  }},
+  "office_address": "string or null",
+  "services_supported": ["list"],
+  "emergency_definition": ["list"],
+  "emergency_routing_rules": {{
+    "primary_contact": "string",
+    "order": ["list"],
+    "fallback": "string"
+  }},
+  "non_emergency_routing_rules": "string or null",
+  "call_transfer_rules": {{
+    "timeout_seconds": "number or null",
+    "retries": "number or null",
+    "message_if_fails": "string or null"
+  }},
+  "integration_constraints": ["list"],
+  "after_hours_flow_summary": "string or null",
+  "office_hours_flow_summary": "string or null",
+  "questions_or_unknowns": ["list"],
+  "notes": "string or null"
+}}
+
+TRANSCRIPT:
+{transcript}
