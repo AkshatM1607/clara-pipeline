@@ -29,3 +29,6 @@ Thumbs.db
 
 # Pipeline outputs
 outputs/accounts/
+
+# Data folder (confidential)
+data/
