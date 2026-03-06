@@ -1,0 +1,47 @@
+{
+  "account_id": "account_005",
+  "company_name": "SecureGuard Systems",
+  "business_hours": {
+    "days": "Monday through Friday",
+    "start": "8:30 AM",
+    "end": "6:30 PM",
+    "timezone": "Eastern"
+  },
+  "office_address": "1180 Peachtree St NE, Atlanta, GA 30309",
+  "services_supported": [
+    "Alarm monitoring setup",
+    "camera installation",
+    "access control",
+    "smart sensor diagnostics"
+  ],
+  "emergency_definition": [
+    "Active break-in alarm",
+    "fire panel alarm on monitored site",
+    "access control lockout at critical facility",
+    "full camera outage at secured property"
+  ],
+  "emergency_routing_rules": {
+    "primary_contact": "Tasha Cole",
+    "order": [
+      "Tasha Cole",
+      "Ian Ford",
+      "rapid response coordinator line"
+    ],
+    "fallback": "Reassure critical priority and response team calls back within 8 minutes"
+  },
+  "non_emergency_routing_rules": "Capture account ID and issue summary, then queue for support specialist callback",
+  "call_transfer_rules": {
+    "timeout_seconds": 19,
+    "retries": 3,
+    "message_if_fails": "We are still attempting a secure handoff and your case is in active review"
+  },
+  "integration_constraints": [
+    "Brivo and Alarm.com only; no remote unlock commands from voice agent"
+  ],
+  "after_hours_flow_summary": "Confirm emergency status, transfer emergency to overnight monitoring desk, otherwise take details for next-day team",
+  "office_hours_flow_summary": null,
+  "questions_or_unknowns": [],
+  "notes": "Professional and confident, never alarmist",
+  "version": "v1",
+  "source": "demo"
+}

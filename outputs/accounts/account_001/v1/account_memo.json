@@ -1,0 +1,51 @@
+{
+  "account_id": "account_001",
+  "version": "v1",
+  "source": "demo_call",
+  "company_name": "Bright Shield Fire Protection",
+  "business_hours": {
+    "days": "Monday to Friday",
+    "start": "8:00 AM",
+    "end": "5:00 PM",
+    "timezone": "EST"
+  },
+  "office_address": "4402 Industrial Drive, Columbus, OH 43228",
+  "services_supported": [
+    "fire protection system installation",
+    "sprinkler system maintenance",
+    "fire extinguisher refill and inspection",
+    "fire alarm system testing"
+  ],
+  "emergency_definition": [
+    "active sprinkler leak or malfunction",
+    "fire alarm triggered or system failure",
+    "potential property damage in progress",
+    "customer requesting emergency service"
+  ],
+  "emergency_routing_rules": {
+    "primary_contact": "Dave Mitchell (on-call technician)",
+    "order": [
+      "Call Dave at primary line",
+      "If no answer, call Linda Martinez (service manager)"
+    ],
+    "fallback": "Inform caller someone will call back within 30 minutes"
+  },
+  "non_emergency_routing_rules": "Take detailed message with customer name, phone, and service request. Follow up next business day by 10 AM.",
+  "call_transfer_rules": {
+    "timeout_seconds": 45,
+    "retries": 1,
+    "message_if_fails": "Our team has been notified and will call you back within 30 minutes"
+  },
+  "integration_constraints": [
+    "Never create jobs automatically in ServiceTrade — dispatcher must do this manually after call",
+    "All emergency calls must be logged in ServiceTrade within 15 minutes"
+  ],
+  "after_hours_flow_summary": "Greet caller, confirm if emergency. If emergency: collect name, number, address and attempt transfer to Dave. If no answer, assure callback within 30 minutes. If non-emergency: take message for next business day.",
+  "office_hours_flow_summary": "Greet caller, collect name and phone number, determine if emergency vs non-emergency, route accordingly to Dave or ask for message",
+  "questions_or_unknowns": [
+    "Exact phone numbers for Dave and Linda not confirmed in demo call",
+    "Transfer timeout duration not explicitly confirmed — assumed 45 seconds based on industry standard",
+    "Unclear if customer wants callback within 30 min for ALL emergencies or only when transfer fails"
+  ],
+  "notes": "Client strongly emphasized ServiceTrade constraint. Demo call was directional and high-level. Participant was operations manager, not dispatcher."
+}

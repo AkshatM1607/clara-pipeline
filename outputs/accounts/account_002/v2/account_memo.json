@@ -1,0 +1,42 @@
+{
+  "account_id": "account_002",
+  "company_name": "Arctic Air HVAC",
+  "business_hours": {
+    "days": "Monday to Sunday",
+    "start": "7:00 AM",
+    "end": "8:00 PM",
+    "timezone": "Central"
+  },
+  "office_address": "9350 Walnut Hill Ln, Dallas, TX 75231",
+  "services_supported": [
+    "indoor air quality diagnostics"
+  ],
+  "emergency_definition": [
+    "carbon monoxide alarm tied to HVAC equipment"
+  ],
+  "emergency_routing_rules": {
+    "primary_contact": "Omar Reed",
+    "order": [
+      "Omar Reed",
+      "Carla Nguyen",
+      "priority technician ring group"
+    ],
+    "fallback": "callback promise is 10 minutes"
+  },
+  "non_emergency_routing_rules": "scheduler callback, gather if customer is new or existing",
+  "call_transfer_rules": {
+    "timeout_seconds": 24,
+    "retries": 3,
+    "message_if_fails": "We have your urgent request and our dispatch team will reach out very soon"
+  },
+  "integration_constraints": [
+    "ServiceTitan only",
+    "do not discuss financing options"
+  ],
+  "after_hours_flow_summary": "Emergency calls transfer to overnight duty phone; non-emergency should offer first-available next-day slot preference",
+  "office_hours_flow_summary": null,
+  "questions_or_unknowns": [],
+  "notes": "Communication style: Warm but fast-paced",
+  "version": "v2",
+  "source": "demo"
+}

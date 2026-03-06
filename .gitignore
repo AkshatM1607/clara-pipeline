@@ -27,8 +27,10 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Pipeline outputs
-outputs/accounts/*
+# Pipeline outputs - track the files, ignore only local runtime data
+outputs/accounts/**/
+!outputs/accounts/**/*.json
+!outputs/accounts/**/*.md
 !outputs/accounts/.gitkeep
 
 # Data folder (confidential)

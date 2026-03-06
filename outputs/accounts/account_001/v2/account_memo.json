@@ -1,0 +1,46 @@
+{
+  "account_id": "account_001",
+  "company_name": "Bright Shield Fire Protection",
+  "business_hours": {
+    "days": "Monday through Friday",
+    "start": "7:30 AM",
+    "end": "6:30 PM",
+    "timezone": "Eastern"
+  },
+  "office_address": "1840 Westerville Rd, Columbus, OH 43224",
+  "services_supported": [
+    "backflow prevention testing"
+  ],
+  "emergency_definition": [
+    "panel showing supervisory fault at a hospital site"
+  ],
+  "emergency_routing_rules": {
+    "primary_contact": "Luis Pena",
+    "order": [
+      "Luis Pena",
+      "Megan Holt",
+      "on-call tech line"
+    ],
+    "fallback": "callback within 7 minutes"
+  },
+  "non_emergency_routing_rules": "collect details and include preferred contact window",
+  "call_transfer_rules": {
+    "timeout_seconds": 28,
+    "retries": 1,
+    "message_if_fails": "We are escalating this now and a fire protection specialist will call you shortly"
+  },
+  "integration_constraints": [
+    "Housecall Pro",
+    "no attachment uploads from the agent"
+  ],
+  "after_hours_flow_summary": "collect details and offer next-business-day morning or afternoon callback slot",
+  "office_hours_flow_summary": null,
+  "questions_or_unknowns": [
+    "other services supported",
+    "full emergency definition list",
+    "office hours flow details"
+  ],
+  "notes": "keep it concise and confident",
+  "version": "v2",
+  "source": "demo"
+}

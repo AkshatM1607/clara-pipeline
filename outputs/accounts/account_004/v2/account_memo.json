@@ -1,0 +1,44 @@
+{
+  "account_id": "account_004",
+  "company_name": "FlowRight Plumbing",
+  "business_hours": {
+    "days": "Monday through Sunday",
+    "start": "5:30 AM",
+    "end": "10:00 PM",
+    "timezone": "Mountain"
+  },
+  "office_address": "2602 E Thomas Rd, Phoenix, AZ 85016",
+  "services_supported": [
+    "slab leak inspection"
+  ],
+  "emergency_definition": [
+    "gas line leak with odor"
+  ],
+  "emergency_routing_rules": {
+    "primary_contact": "Ben Chavez",
+    "order": [
+      "Ben Chavez",
+      "Nora Patel",
+      "emergency plumber group line"
+    ],
+    "fallback": "12 minutes"
+  },
+  "non_emergency_routing_rules": "standard scheduling queue and collect whether water must be shut off",
+  "call_transfer_rules": {
+    "timeout_seconds": 30,
+    "retries": 1,
+    "message_if_fails": "We are dispatching the next available plumber and will call you shortly with status"
+  },
+  "integration_constraints": [
+    "FieldEdge only",
+    "do not provide insurance coverage guidance"
+  ],
+  "after_hours_flow_summary": "Emergency transfers remain, non-emergency should collect details and ask preferred callback window tomorrow",
+  "office_hours_flow_summary": null,
+  "questions_or_unknowns": [
+    "Office hours flow summary details"
+  ],
+  "notes": "Keep it plain language and empathetic",
+  "version": "v2",
+  "source": "demo"
+}

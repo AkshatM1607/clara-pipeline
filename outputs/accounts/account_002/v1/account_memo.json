@@ -1,0 +1,49 @@
+{
+  "account_id": "account_002",
+  "company_name": "Arctic Air HVAC",
+  "business_hours": {
+    "days": "Monday to Saturday",
+    "start": "7:30 AM",
+    "end": "7:00 PM",
+    "timezone": "Central"
+  },
+  "office_address": "9350 Walnut Hill Ln, Dallas, TX 75231",
+  "services_supported": [
+    "AC repair",
+    "furnace tune-ups",
+    "duct cleaning",
+    "thermostat replacement"
+  ],
+  "emergency_definition": [
+    "No cooling above 95 degrees",
+    "no heat below 40 degrees",
+    "burning smell from unit",
+    "refrigerant leak concerns"
+  ],
+  "emergency_routing_rules": {
+    "primary_contact": "Carla Nguyen",
+    "order": [
+      "Carla Nguyen",
+      "Omar Reed",
+      "priority technician ring group"
+    ],
+    "fallback": "Tell callers we flagged urgent status and a technician will return call in 15 minutes"
+  },
+  "non_emergency_routing_rules": "Gather issue type and preferred window, then queue for scheduler callback",
+  "call_transfer_rules": {
+    "timeout_seconds": 20,
+    "retries": 2,
+    "message_if_fails": "We are still connecting you, please hold while we secure the right specialist"
+  },
+  "integration_constraints": [
+    "ServiceTitan only",
+    "no payment collection",
+    "no warranty promises"
+  ],
+  "after_hours_flow_summary": "Ask emergency yes or no, transfer emergency calls to overnight duty phone, otherwise log details for morning dispatch",
+  "office_hours_flow_summary": null,
+  "questions_or_unknowns": [],
+  "notes": "Keep it direct and reassuring",
+  "version": "v1",
+  "source": "demo"
+}

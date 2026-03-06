@@ -1,0 +1,47 @@
+{
+  "account_id": "account_003",
+  "company_name": "Volt Masters Electric",
+  "business_hours": {
+    "days": "Monday through Friday",
+    "start": "8:00 AM",
+    "end": "5:30 PM",
+    "timezone": "Central"
+  },
+  "office_address": "4218 S Halsted St, Chicago, IL 60609",
+  "services_supported": [
+    "Panel upgrades",
+    "breaker troubleshooting",
+    "lighting retrofits",
+    "EV charger installs"
+  ],
+  "emergency_definition": [
+    "Burning odor",
+    "smoking panel",
+    "total power loss in occupied site",
+    "sparking outlet"
+  ],
+  "emergency_routing_rules": {
+    "primary_contact": "Erin Blake",
+    "order": [
+      "Erin Blake",
+      "Dante Ruiz",
+      "emergency electrician hotline"
+    ],
+    "fallback": "we are alerting the on-call electrician and they should expect callback in under 12 minutes"
+  },
+  "non_emergency_routing_rules": "Gather caller info and problem summary, then send to front desk scheduling queue",
+  "call_transfer_rules": {
+    "timeout_seconds": 18,
+    "retries": 3,
+    "message_if_fails": "We are lining up the right electrician now and will stay with you"
+  },
+  "integration_constraints": [
+    "We use Jobber; do not quote prices and do not book permit-related jobs automatically"
+  ],
+  "after_hours_flow_summary": "Confirm emergency, route urgent calls to on-call electrician, non-urgent gets a next-day callback ticket",
+  "office_hours_flow_summary": null,
+  "questions_or_unknowns": [],
+  "notes": "Keep it calm and safety-focused",
+  "version": "v1",
+  "source": "demo"
+}

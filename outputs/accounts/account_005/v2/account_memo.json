@@ -1,0 +1,43 @@
+{
+  "account_id": "account_005",
+  "company_name": "SecureGuard Systems",
+  "business_hours": {
+    "days": "Monday through Saturday",
+    "start": "8:00 AM",
+    "end": "7:00 PM",
+    "timezone": "Eastern"
+  },
+  "office_address": "1180 Peachtree St NE, Atlanta, GA 30309",
+  "services_supported": [
+    "intercom troubleshooting support"
+  ],
+  "emergency_definition": [
+    "forced door alarm at healthcare site"
+  ],
+  "emergency_routing_rules": {
+    "primary_contact": "Ian Ford",
+    "order": [
+      "Ian Ford",
+      "Tasha Cole",
+      "rapid response coordinator line"
+    ],
+    "fallback": "6 minutes response callback target"
+  },
+  "non_emergency_routing_rules": "Capture account ID, site name, and preferred callback number",
+  "call_transfer_rules": {
+    "timeout_seconds": 23,
+    "retries": 2,
+    "message_if_fails": "Your security case is marked high priority and our monitoring lead will contact you shortly"
+  },
+  "integration_constraints": [
+    "Brivo",
+    "Alarm.com",
+    "no password reset actions by voice agent"
+  ],
+  "after_hours_flow_summary": "Emergency transfers go to overnight monitoring desk; non-emergency should collect details and provide next-day callback expectation",
+  "office_hours_flow_summary": null,
+  "questions_or_unknowns": [],
+  "notes": "Keep language calm, authoritative, and concise",
+  "version": "v2",
+  "source": "demo"
+}

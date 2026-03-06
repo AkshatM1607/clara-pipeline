@@ -1,0 +1,51 @@
+{
+  "account_id": "account_004",
+  "company_name": "FlowRight Plumbing",
+  "business_hours": {
+    "days": "Monday through Sunday",
+    "start": "6:00 AM",
+    "end": "9:00 PM",
+    "timezone": "Mountain"
+  },
+  "office_address": "2602 E Thomas Rd, Phoenix, AZ 85016",
+  "services_supported": [
+    "Drain cleaning",
+    "Leak detection",
+    "Water heater repair",
+    "Sewer camera inspections"
+  ],
+  "emergency_definition": [
+    "Major leak flooding",
+    "Sewer backup",
+    "No water in occupied home",
+    "Burst pipe"
+  ],
+  "emergency_routing_rules": {
+    "primary_contact": "Dispatch captain Nora Patel",
+    "order": [
+      "Dispatch captain Nora Patel",
+      "Operations lead Ben Chavez",
+      "Emergency plumber group line"
+    ],
+    "fallback": "Tell caller help is being escalated and plumber callback target is 20 minutes"
+  },
+  "non_emergency_routing_rules": "Collect details and place into standard scheduling queue",
+  "call_transfer_rules": {
+    "timeout_seconds": 25,
+    "retries": 2,
+    "message_if_fails": "We are securing the next available plumber and will contact you shortly"
+  },
+  "integration_constraints": [
+    "FieldEdge integration only",
+    "No insurance claim advice",
+    "No parts cost commitments"
+  ],
+  "after_hours_flow_summary": "Ask if emergency, transfer emergencies to on-call plumber, non-emergency leaves service details for morning",
+  "office_hours_flow_summary": null,
+  "questions_or_unknowns": [
+    "Office hours flow summary details"
+  ],
+  "notes": "Keep language simple for homeowners",
+  "version": "v1",
+  "source": "demo"
+}
