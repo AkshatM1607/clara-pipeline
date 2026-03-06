@@ -28,7 +28,8 @@ Thumbs.db
 .idea/
 
 # Pipeline outputs
-outputs/accounts/
+outputs/accounts/*
+!outputs/accounts/.gitkeep
 
 # Data folder (confidential)
 data/
