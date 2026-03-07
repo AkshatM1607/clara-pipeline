@@ -98,3 +98,59 @@ All output paths are built with `get_output_path(account_id, version, filename)`
 - All file writes auto-create parent directories.
 - `run_pipeline_a()` and `run_pipeline_b()` return `True`/`False` and do not crash caller execution.
 - `run_all.py` continues across account failures.
+
+## Architecture
+
+```
+data/demo/{account_id}_demo.txt
+        │
+        ▼
+  Pipeline A
+  (LLM extraction + agent spec generation)
+        │
+        ├──► outputs/{account_id}/v1/account_memo.json
+        └──► outputs/{account_id}/v1/agent_spec.json
+
+data/onboarding/{account_id}_onboarding.txt
+        │
+        ▼
+  Pipeline B
+  (extract changes → merge → regenerate → diff)
+        │
+        ├──► outputs/{account_id}/v2/account_memo.json
+        ├──► outputs/{account_id}/v2/agent_spec.json
+        └──► outputs/{account_id}/v2/changes.md
+```
+
+**LLM:** Groq free tier (Llama 3 70B)  
+**Storage:** Local JSON files  
+**Orchestration:** Python scripts
+
+## Using outputs with Retell
+
+Retell's free tier does not support programmatic agent creation via API.
+To manually import a generated agent spec:
+
+1. Log in at https://retell.ai
+2. Click "Create Agent"
+3. Open `agent_spec.json` for your account
+4. Copy the `system_prompt` field into Retell's system prompt box
+5. Set voice and language from the `key_variables` section
+6. Configure call transfer using `call_transfer_protocol`
+7. Save the agent
+
+## Known limitations
+
+- Requires transcripts as input — audio transcription not included
+- Retell agent creation is manual (free tier API restriction)
+- Groq free tier has a 100k token/day limit — large batches may need a wait
+- LLM may miss fields in very short or vague transcripts — always check `questions_or_unknowns`
+
+## What I would improve with production access
+
+- Direct Retell API integration to auto-create and update agents
+- Webhook triggers from Calendly or CRM when onboarding call completes
+- Automatic audio transcription via Whisper
+- Slack or email notification when pipeline finishes
+- Web dashboard to view all accounts, v1/v2 status, and open questions
+- Replace local JSON storage with Supabase for multi-user access
